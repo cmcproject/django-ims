@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<dl>
+    <dt>Name</dt>
+    <dd>{{ tool.name }}</dd>
+    <dt>Serial number</dt>
+    <dd>{{ tool.serial_number }}</dd>
+    <dt>Team</dt>
+    <dd>{{ tool.team }}</dd>
+</dl>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Serial number</th>
+            <th>Team</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for tool in tools %}
+             <tr>
+                <th>
+                    <a href="{% url 'tools_detail' tool.id %}">{{ tool.name }}</a>
+                </th>
+                <th>{{ tool.serial_number }}</th>
+                <th>{{ tool.team }}</th>
+             </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
